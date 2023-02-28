@@ -14,6 +14,10 @@ definePageMeta({
       <div class="post mt-4">
         <ContentRenderer :value="doc" />
       </div>
+
+      <template #not-found>
+        <h1 class="text-h3 mb-4">Пост не найден!</h1>
+      </template>
     </ContentDoc>
   </NuxtLayout>
 </template>

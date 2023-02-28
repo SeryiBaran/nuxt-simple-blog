@@ -14,6 +14,9 @@ export default defineNuxtConfig({
         p: 'Paragraph',
       }
     },
+    api: {
+      baseURL: '/#/api/_content',
+    },
   },
   build: {
     transpile: ["vuetify"],
