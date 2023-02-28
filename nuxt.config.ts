@@ -18,4 +18,9 @@ export default defineNuxtConfig({
     "@/*": "./src/*",
   },
   pages: true,
+  router: {
+    options: {
+      hashMode: true
+    }
+  }
 });
