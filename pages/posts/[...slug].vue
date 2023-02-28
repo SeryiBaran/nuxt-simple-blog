@@ -2,18 +2,22 @@
 definePageMeta({
   documentDriven: false,
 });
+
+const route = useRoute();
+
+const { data } = await useAsyncData("post", () =>
+  queryContent(route.path).findOne()
+);
 </script>
 
 <template>
   <NuxtLayout>
-    <ContentDoc v-slot="{ doc }">
-      <h1 class="text-h3 mb-4">{{ doc.title }}</h1>
+    <h1 class="text-h3 mb-4">{{ data.title }}</h1>
 
-      <p class="text-subtitle-2">{{ formatDate(doc.date) }}</p>
+    <p class="text-subtitle-2">{{ formatDate(data.date) }}</p>
 
-      <div class="post mt-4">
-        <ContentRenderer :value="doc" />
-      </div>
-    </ContentDoc>
+    <div class="post mt-4">
+      <ContentDoc />
+    </div>
   </NuxtLayout>
 </template>
