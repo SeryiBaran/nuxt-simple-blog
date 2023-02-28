@@ -14,7 +14,6 @@ export default defineNuxtConfig({
         p: 'Paragraph',
       }
     },
-    baseURL: '/nuxt-simple-blog/api/_content',
   },
   build: {
     transpile: ["vuetify"],
