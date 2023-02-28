@@ -1,5 +1,9 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
+  target: 'static',
+  app: {
+    baseURL: '/nuxt-simple-blog/',
+  },
   css: ["@mdi/font/css/materialdesignicons.css", "vuetify/lib/styles/main.css"],
   modules: ["@nuxt/content", "@pinia/nuxt"],
   content: {
